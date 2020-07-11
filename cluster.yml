@@ -1,0 +1,16 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: pcluster
+  region: ap-south-1
+
+nodegroups:
+- name : ng1
+ desiredCapacity: 2
+instanceType: t2.micro
+- name: ng2
+desiredCapacity: 1
+instanceTypeL t2.small
+ssh:
+  publickeyname: key1
